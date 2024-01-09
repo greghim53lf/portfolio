@@ -37,7 +37,7 @@ export default function HomePage() {
           CONTACT ME
         </Link>
       </div>
-      <Logo />
+      <Logo className="logo-container"/>
     </HomePageStyled>
   )
 }
@@ -134,6 +134,49 @@ const HomePageStyled = styled.div`
         background: #fa7a11;
         color: #111;
       }
+    }
+  }
+  @media(max-width: 1200px){
+    .text{
+      position: initial;
+      width: 100%;
+      transform: none;
+      padding: 10px;
+      box-sizing: border-box;
+      h1::before,
+      h1::after{
+        display: none;
+      }
+      h2{
+        text-align: center;
+      }
+      .flat-button{
+        float: none;
+        display: block;
+        margin: 20px auto 0 auto;
+        width: 125px;
+      }
+    }
+
+    .logo-container{
+      position: relative;
+      width: 150px;
+      height: auto;
+      top: 50px;
+      right: 0;
+      box-sizing: border-box;
+      margin: auto;
+      left: 0;
+    }
+  }
+  @media(max-width: 1200px) and (min-width: 768px){
+    .logo-container{
+      width: 350px;
+    }
+  }
+  @media(max-width: 280px){
+    .logo-container{
+      width: 75px;
     }
   }
 `

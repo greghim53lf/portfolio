@@ -1,10 +1,10 @@
 import Me from 'assets/images/me.jpeg'
 import styled from 'styled-components'
 
-export default function Logo() {
+export default function Logo({className}) {
 
   return (
-    <ImageStyled>
+    <ImageStyled className={className}>
       <img className="developer-image" src={Me} alt="g" />
       <figcaption>@greghim53lf</figcaption>
     </ImageStyled>
@@ -44,8 +44,6 @@ const ImageStyled = styled.figure`
 
         border: 5px solid var(--primary-orange);
         display: block;
-        /* width: 200px; */
-        /* height: 250px; */
     }
     figcaption{
       text-align: center;

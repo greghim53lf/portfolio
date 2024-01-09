@@ -4,7 +4,7 @@ import styled from "styled-components";
 
 export default function Layout() {
   return (
-      <LayoutStyled>
+    <LayoutStyled>
       <Sidebar />
       <div className="page">
         <span className="tags top-tags">&lt;body&gt;</span>
@@ -123,6 +123,31 @@ const LayoutStyled = styled.div`
     .text-animate-hover{
       &:hover{
         color: #fff;
+      }
+    }
+  }
+  @media (max-width: 1200px){
+    .page{
+      position: initial;
+      .tags{
+        display: none;
+      }
+      .container{
+        position: initial;
+        height: auto;
+        min-height: auto;
+      }
+      .about-page,
+      .contact-page,
+      .portfolio-page{
+        .text{
+          position: initial;
+          transform: none;
+          width: 100%;
+          display: block;
+          padding: 20px;
+          box-sizing: border-box;
+        }
       }
     }
   }

@@ -33,4 +33,12 @@ const AboutPageStyled = styled.div`
     overflow: hidden;
     animation: fadeIn 3s;
   }
+  @media(max-width: 1200px){
+    .stage-cube-container{
+      position: initial;
+      width: 100%;
+      height: 0;
+      overflow: visible;
+    }
+  }
 `

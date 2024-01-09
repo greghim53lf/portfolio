@@ -47,7 +47,7 @@ const ContactPageStyled = styled.div`
     background: #000;
     top: 50px;
     right: 30%;
-    z-index: 99;
+    z-index: 9;
     width: 267px;
     padding: 20px;
     color: #fff;
@@ -71,5 +71,16 @@ const ContactPageStyled = styled.div`
     height: 100vh;
     opacity: 0;
     animation: backInRight 1s 1.2s forwards;
+  }
+  @media(max-width: 1200px){
+    .info-map{
+      display: none;
+    }
+    .map{
+      float: none;
+      width: 100%;
+      height: 400px;
+      margin: 0;
+    }
   }
 `

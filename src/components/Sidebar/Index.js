@@ -2,31 +2,34 @@ import { Link, NavLink } from 'react-router-dom'
 import styled from 'styled-components'
 import Logo from 'assets/images/logo.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faHome, faUser, faEnvelope, faSuitcase } from '@fortawesome/free-solid-svg-icons'
+import { faHome, faUser, faEnvelope, faSuitcase, faBars, faClose } from '@fortawesome/free-solid-svg-icons'
 import { faGithub, faInstagram, faLinkedin, faTwitter, faYoutube } from '@fortawesome/free-brands-svg-icons';
-// import "./index.scss";
+import { useState } from 'react'
 
 export default function Sidebar() {
+    const [showNav, setShowNav] = useState(false)
+    
   return (
     <SidebarStyled className='nav-bar'>
       <Link className="logo" to="/">
         <img src={Logo} alt="logo" />
       </Link>
-      <nav>
-        <NavLink exact="true" activeclassname="active" to="/">
+      <nav className={showNav ? 'mobile-show': ''}>
+        <NavLink onClick={() => setShowNav(false)}  exact="true" activeclassname="active" to="/">
           <FontAwesomeIcon icon={faHome} color="#404040" />
         </NavLink>
-        <NavLink exact="true" activeclassname="active" className="about" to="/about">
+        <NavLink onClick={() => setShowNav(false)} exact="true" activeclassname="active" className="about" to="/about">
           <FontAwesomeIcon icon={faUser} color="#404040" />
         </NavLink>
-        <NavLink exact="true" activeclassname="active" className="portfolio" to="/portfolio">
+        <NavLink onClick={() => setShowNav(false)} exact="true" activeclassname="active" className="portfolio" to="/portfolio">
           <FontAwesomeIcon icon={faSuitcase} color="#404040" />
               </NavLink>
-        <NavLink exact="true" activeclassname="active" className="contact" to="/contact">
+        <NavLink onClick={() => setShowNav(false)} exact="true" activeclassname="active" className="contact" to="/contact">
           <FontAwesomeIcon icon={faEnvelope} color="#404040" />
               </NavLink>
+              <FontAwesomeIcon onClick={() => setShowNav(false)} icon={faClose} color="#fa7a11" size='3x' className='close-icon'/>
           </nav>
-          <ul>
+          <ul className={showNav ? 'mobile-show' : ''}>
               <li>
                   <a target='_blank' rel='noreferrer' href='https://www.linkedin.com/in/greghim53lf'>
                       <FontAwesomeIcon icon={faLinkedin} color="#404040"/>
@@ -53,6 +56,7 @@ export default function Sidebar() {
                   </a>
               </li>
           </ul>
+          <FontAwesomeIcon onClick={() => setShowNav(true)} icon={faBars} color='#fa7a11' size='3x' className='hamburger-icon'/>
     </SidebarStyled>
   )
 }
@@ -167,7 +171,50 @@ const SidebarStyled = styled.div`
                 }
             }
         }
+        .hamburger-icon,
+        .close-icon{
+            display: none;
+        }
         @media(max-width: 1200px){
-
+            background: transparent;
+            position: initial;
+            height: auto;
+            min-height: auto;
+            ul, nav{
+                display: none;
+                z-index: 10;
+            }
+            nav{
+                width: 100%;
+                height: 100%;
+                background-color: #19191a;
+                top: 0;
+                left: 0;
+                position: fixed;
+                margin: 0;
+                a{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    &::after{
+                        opacity: 1;
+                        position: initial;
+                        width: auto;
+                        margin-left: 10px;
+                    }
+                }
+                a svg{
+                    opacity: 1 !important;
+                }
+            }
+            .mobile-show{
+                display: block;
+            }
+            .hamburger-icon, .close-icon{
+                display: block;
+                position: absolute;
+                top: 10px;
+                right: 10px;
+            }
         }
 `

@@ -107,4 +107,19 @@ const PortfolioPageStyled = styled.div`
       }
     }
   }
+  @media(max-width: 1200px){
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    h1{
+      margin-left: 20px;
+      margin-top: 20px !important;
+    }
+    .image-container{
+      .portfolio{
+        height: 200px;
+        max-width: calc(50% - 10px);
+      }
+    }
+  }
 `
