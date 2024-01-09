@@ -84,7 +84,7 @@ const ContactPageStyled = styled.div`
     .map{
       float: none;
       width: 100%;
-      height: 100vh;
+      height: 400px;
       margin: 0;
     }
   }
