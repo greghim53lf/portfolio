@@ -74,7 +74,7 @@ const SidebarStyled = styled.div`
     padding: 8px auto;
     img {
       display: block;
-      margin: 8px auto;
+      margin: 14px auto;
       width: 36px;
       height: auto;
     }
@@ -95,7 +95,7 @@ const SidebarStyled = styled.div`
         height: 51px;
         position: relative;
         text-decoration: none;
-        i{
+        i, svg{
             transition: all 0.3s ease-in-out;
         }
         &:hover{
@@ -174,6 +174,7 @@ const SidebarStyled = styled.div`
         .hamburger-icon,
         .close-icon{
             display: none;
+            cursor: pointer;
         }
         @media(max-width: 1200px){
             background: transparent;
@@ -192,6 +193,11 @@ const SidebarStyled = styled.div`
                 left: 0;
                 position: fixed;
                 margin: 0;
+                .active{
+                    &::after{
+                        color: var(--primary-orange);
+                    }
+                }
                 a{
                     display: flex;
                     justify-content: center;
@@ -199,16 +205,31 @@ const SidebarStyled = styled.div`
                     &::after{
                         opacity: 1;
                         position: initial;
-                        width: auto;
+                        width: 100px;
+                        font-weight: 700;
+                        font-size: 13px;
                         margin-left: 10px;
+                    }
+                    &:hover{
+                        svg, &::after{
+                            color: var(--primary-orange);
+                        }
                     }
                 }
                 a svg{
+                    width: 40px;
                     opacity: 1 !important;
                 }
             }
             .mobile-show{
                 display: block;
+                li{
+                    display: inline-block;
+                    margin: 0 20px;
+                    a{
+                        font-size: 20px;
+                    }
+                }
             }
             .hamburger-icon, .close-icon{
                 display: block;

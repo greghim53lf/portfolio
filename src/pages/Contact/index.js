@@ -8,6 +8,7 @@ export default function ContactPage() {
     
   return (
     <ContactPageStyled className="contact-page">
+      <div className='form-text-field'>
       <div className="text">
         <h1>
           <AnimatedLetters word="Contact me" delay={1} />
@@ -20,6 +21,7 @@ export default function ContactPage() {
           <SendEmailForm/>
         </div>
       </div>
+        </div>
       <div className="info-map">
         Okpeahior Gregory
         <br />
@@ -29,7 +31,7 @@ export default function ContactPage() {
         Ogba
         <br />
         <span>greghim53lf@gmail.com</span>
-          </div>
+        </div>
           <div className="map">
         <Map/>
       </div>
@@ -73,13 +75,16 @@ const ContactPageStyled = styled.div`
     animation: backInRight 1s 1.2s forwards;
   }
   @media(max-width: 1200px){
+    .form-text-field{
+      height: 100vh;
+    }
     .info-map{
       display: none;
     }
     .map{
       float: none;
       width: 100%;
-      height: 400px;
+      height: 100vh;
       margin: 0;
     }
   }

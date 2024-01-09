@@ -39,6 +39,8 @@ const AboutPageStyled = styled.div`
       width: 100%;
       height: 0;
       overflow: visible;
+      padding-top: 9%;
+      height: auto;
     }
   }
 `
