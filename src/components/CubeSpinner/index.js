@@ -1,18 +1,18 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCss3, faGitAlt, faHtml5, faJsSquare, faNodeJs, faReact } from '@fortawesome/free-brands-svg-icons'
+import { faCss3, faFigma, faGitAlt, faNodeJs, faPython, faReact } from '@fortawesome/free-brands-svg-icons'
 import styled from "styled-components"
 
 export default function index() {
     return (
         <CubeSpinnerStyled>
             <div className="face1">
-                <FontAwesomeIcon icon={faHtml5} color="#f06529" />
+                <FontAwesomeIcon icon={faFigma} color="#e4041d" />
             </div>
             <div className="face2">
                 <FontAwesomeIcon icon={faCss3} color="#28a4d9" />
             </div>
             <div className="face3">
-                <FontAwesomeIcon icon={faJsSquare} color="#efd81d" />
+                <FontAwesomeIcon icon={faNodeJs} color="#efd81d" />
             </div>
             <div className="face4">
                 <FontAwesomeIcon icon={faReact} color="#5ed4f4" />
@@ -21,7 +21,7 @@ export default function index() {
                 <FontAwesomeIcon icon={faGitAlt} color="#ec4d28" />
             </div>
             <div className="face6">
-                <FontAwesomeIcon icon={faNodeJs} color="#dd0031" />
+                <FontAwesomeIcon icon={faPython} color="#000" />
             </div>
         </CubeSpinnerStyled>
     )

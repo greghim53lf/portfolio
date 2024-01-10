@@ -10,9 +10,9 @@ export default function AboutPage() {
           <h1>
             <AnimatedLetters word="About me" delay={1} />
           </h1>
-          <p className='paragraph-style'>I'm a very ambitious front-end developer looking for a role in an established IT company with the opportunity to work with the latest technologies on challenging and diverse projects.</p>
+          <p className='paragraph-style'>I'm a very passionate and ambitious software developer looking to collaborate with other IT enthusiasts in building organizational and personal projects for a role in an established IT company with the opportunity to work with the latest technologies on challenging and diverse projects.</p>
           <p className='paragraph-style' align="LEFT">I'm quiet confident, naturally curious, and perpetually working on improving my chops one design problem at a time.</p>
-          <p className='paragraph-style'>If I need to define myself in one sentence that would be a family person, father of a beautiful daughter, a sports fanatic, photography enthusiast, and tech-obsessed!!!</p>
+          <p className='paragraph-style'>If I need to define myself in one sentence that music lover, a sports fanatic, photography enthusiast, and tech-obsessed!!!</p>
         </div>
         <div className="stage-cube-container">
           <CubeSpinner/>

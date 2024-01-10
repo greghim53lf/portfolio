@@ -30,9 +30,9 @@ export default function HomePage() {
           <img src={LogoG} alt="developer" />
           <AnimatedLetters timeout={4000} word="reg" delay={15} />
           <br />
-          <AnimatedLetters word="web developer." timeout={4000} delay={18} />
+          <AnimatedLetters word="software developer." timeout={4000} delay={18} />
         </h1>
-        <h2>Full-Stack Developer</h2>
+        <h2>Software Engineer</h2>
         <Link className="flat-button" to="/contact">
           CONTACT ME
         </Link>
